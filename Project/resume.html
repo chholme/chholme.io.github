@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Resume Page</title>
+
+    <!-- Stylesheets -->
+    <link rel= "stylesheet" href= "css/normalize.css">
+    <link rel= "stylesheet" href= "css/styles.css">
+    <link rel= "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+   		integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+   		crossorigin=""/>
+
+    <!-- Font Awesome - For use in I360 -->
+		<script src="https://kit.fontawesome.com/bf37eaf948.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    
+     <!-- NAVIGATION -->
+    <nav>
+        <div class="home-link">
+            <!-- Could be a link to home, or could be just the logo or name -->
+          <a href="index.html"><i class="logo fa-solid fa-heart fa-2xl"></i></a>
+          <p class="logo-name">Charity Holmes</p>
+        </div>
+        <ul>
+            <li class="menu-button">
+                <span class="open-menu" aria-label="Open main menu"><i class="fa-solid fa-bars fa-2xl"></i><span class="sr-only">Open main menu</span></span>
+                <span class="close-menu" aria-label="Close main menu"><i class="fa-solid fa-times fa-2xl"></i><span class="sr-only">Close main menu</span></span>
+            </li>
+            <li class="menu-item"><a href="index.html">About</a></li>
+            <li class="menu-item"><a href="resume.html">Resume</a></li>
+            <li class="menu-item"><a href="fambam.html">Background</a></li>
+            <li class="menu-item"><a href="contact.html">Contact</a></li>
+            <li class="menu-item"><a href="donate.html">Donate</a></li>
+        </ul>
+    </nav>
+
+    <header>
+      <h1> Charity's Resume </h1>
+    </header>
+  
+    <article class="five">
+      <section class = "download">
+        <p class = "para5">
+          You should contribute to Charity and read my Resume.<br>
+          <b>Click the button to download.</b><br>
+        </p>
+        <a class="button" href="resume2.pdf">Download My Resume</a>
+      </section>
+      <br />
+        <section class = "resume">
+          <iframe src="https://docs.google.com/document/d/e/2PACX-1vRac1J8xZmC-tySnDxZT7MU-CiDH82zTHBOOYKlKg3wsBx8-TKM7V1F0v9XYEqGdQ/pub?embedded=true"
+            width= "760"
+            height = "1015"
+            title= "My Resume">
+          </iframe>
+
+        </section>
+      </article>
+    <script src="js/rwd_nav.js"></script>
+  </body>
+</html>

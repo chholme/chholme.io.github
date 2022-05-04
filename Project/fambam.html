@@ -1,0 +1,131 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Background Page</title>
+
+    <!-- Stylesheets -->
+    <link rel= "stylesheet" href= "css/normalize.css">
+    <link rel= "stylesheet" href= "css/styles.css">
+    <link rel= "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+   		integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+   		crossorigin=""/>
+
+    <!-- Font Awesome - For use in I360 -->
+		<script src="https://kit.fontawesome.com/bf37eaf948.js" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="home-link">
+            <!-- Could be a link to home, or could be just the logo or name -->
+          <a href="index.html"><i class="logo fa-solid fa-heart fa-2xl"></i></a>
+          <p class="logo-name">Charity Holmes</p>
+        </div>
+        <ul>
+            <li class="menu-button">
+                <span class="open-menu" aria-label="Open main menu"><i class="fa-solid fa-bars fa-2xl"></i><span class="sr-only">Open main menu</span></span>
+                <span class="close-menu" aria-label="Close main menu"><i class="fa-solid fa-times fa-2xl"></i><span class="sr-only">Close main menu</span></span>
+            </li>
+            <li class="menu-item"><a href="index.html">About</a></li>
+            <li class="menu-item"><a href="resume.html">Resume</a></li>
+            <li class="menu-item"><a href="fambam.html">Background</a></li>
+            <li class="menu-item"><a href="contact.html">Contact</a></li>
+            <li class="menu-item"><a href="donate.html">Donate</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <header>
+      <h1> A Little Family <span>History</span></h1>
+    </header>
+   
+    <div id="map"></div>
+    <main>
+      <h2>Florida Living</h2>
+      <article class = "one">
+        <p class = "para1">
+            Back home I had three hamsters named January, Geechi, and Peru, however they all sadly passed away shortly before I moved. 
+            I lived with my dad, and I have two siblings, an older brother named R'Mon and an older sister named Rhea. 
+            I also have best friends who I've known since tenth grade, Vyrlle and Shakyra, and my boyfriend, Najee. 
+            I actually lived in Indiana until I was 12 and then I moved to Florida. 
+            I do miss home, my friends and family, but I'm happy to be in Indiana and experience the winter again.
+        </p>
+
+         <div class="image" >
+          <img src="images/friends.JPG" width="500px"/>
+        </div>
+      </article>
+
+      <h2>Origin Story</h2>
+      <article class = "one">
+        <p class = "para1">
+        Miami has not always had a strong background in my family's history, but we have, in our way, made it our home. 
+        Our story begins with my father Bennie Holmes, who was born and raised in Miami and has few stories to tell about the experience, it seems many of his memories have dissolved with time. 
+        My mother is originally from Gary, Indiana and was already the mother to my sister Rhea Berry, who was two at the time. 
+        In a progressive switch of gender roles, my mother asks my father to marry her and they quickly move in together in Miami.
+        My family, as it was budding with only three family members, alternated between living in Miami and Indianapolis during this time period. 
+        Eventually, just a year and a half after my brother was born I came along. 
+        </p>
+    
+      </article>
+
+    <br />
+
+  <h2 class="gap">My Two Homes</h2>  
+  
+  <article class="two">
+    
+    <div class="image" >
+      <img src="images/family.jpg" width="400px"/>
+    </div>
+
+    <p class = "para2">
+        I spent my first ten years of my childhood in Indiana, growing up in a culture vastly different from the one I would have come to know had my family stayed in Miami. 
+        I have two homes, I owe a lot of who I am to Indiana, but Miami is where I defined who I am as I developed from a adolescent to a young adult. 
+
+    <br />
+    <br />
+        I’ve heard many people describe Miami as a ‘melting pot’, however one idea that truly resonated with me is the ‘salad theory’. 
+        This theory suggests that rather than different people coming to Miami to become like each other, 
+        various people come to Miami and bring their own unique aspects, but everyone still lives in harmony together, for the most part.
+        I like this theory alot.
+    </p>
+  </article>
+</main>
+
+    <script src="js/rwd_nav.js"></script>
+    <!-- Leaflet: Either ok - download the resources or use the CDN -->
+		
+   		<!-- ALSO OK to put activation script into a LEAFLET.JS or MAIN.JS file in JS folder, then link with script tag  -->
+	<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+   	integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="crossorigin="">	
+	</script>
+	<script> 
+		var map = L.map("map").setView([25.566650, -80.378853], 13);
+		L.tileLayer(
+		"https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}",
+		{
+			attribution:
+			'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+			maxZoom: 18,
+			id: "mapbox/streets-v11",
+			tileSize: 512,
+			zoomOffset: -1,
+			accessToken:
+			'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw',
+		}
+		).addTo(map);
+
+		L.marker([25.566650, -80.378853])
+		.addTo(map)
+		.bindPopup("Cutler Bay, Florida")
+		.openPopup(); 
+	</script>
+  </body>
+  </html>

@@ -1,0 +1,110 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Info</title>
+
+    <!-- Stylesheets -->
+    <link rel= "stylesheet" href= "css/normalize.css">
+    <link rel= "stylesheet" href= "css/styles.css">
+    <link rel= "stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+
+    <!-- Font Awesome - For use in I360 -->
+		<script src="https://kit.fontawesome.com/bf37eaf948.js" crossorigin="anonymous"></script>
+
+  </head>
+
+  <body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="home-link">
+            <!-- Could be a link to home, or could be just the logo or name -->
+            <a href="index.html"><i class="logo fa-solid fa-heart fa-2xl"></i></a>
+            <p class="logo-name">Charity Holmes</p>
+        </div>
+        <ul>
+            <li class="menu-button">
+                <span class="open-menu" aria-label="Open main menu"><i class="fa-solid fa-bars fa-2xl"></i><span class="sr-only">Open main menu</span></span>
+                <span class="close-menu" aria-label="Close main menu"><i class="fa-solid fa-times fa-2xl"></i><span class="sr-only">Close main menu</span></span>
+            </li>
+            <li class="menu-item"><a href="index.html">About</a></li>
+            <li class="menu-item"><a href="resume.html">Resume</a></li>
+            <li class="menu-item"><a href="fambam.html">Background</a></li>
+            <li class="menu-item"><a href="contact.html">Contact</a></li>
+            <li class="menu-item"><a href="donate.html">Donate</a></li>
+        </ul>
+    </nav>
+
+    <header>
+      <h1> Call Me Beep Me!</h1>
+    </header>
+
+    <main>
+      <h2>If You Wanna Reach Me</h2>
+      <article class="one">
+        <p class = "para1">
+          Below you see my email, mobile number, and school address. Your questions and comments are
+          important to me. Feel free to contact me and I'll get back to you as soon as possible.
+        </p>
+      </article>
+    <br/>
+
+  <h2 class="gap">Get in touch</h2>  
+  
+  <article class="contact">
+    <p class = "para2">
+        <i class="logo fa-solid fa-mobile-screen fa-2xl"></i>
+        +1-786-532-5060
+    <br />
+    <br />
+        <i class="logo fa-solid fa-envelope fa-2xl"></i>
+        charitybeholmes@gmail.com
+    <br />
+    <br />
+        <i class="logo fa-solid fa-location-dot fa-2xl"></i>
+        919 E 10th St,
+        Bloomington, IN
+        47408
+    </p>
+
+    <!-- code from w3schools.com How To - Contact Form -->
+    <div class="form">
+        <form action="" method="POST" enctype="multipart/form-data">
+          <input name="action" value="submit" type="hidden"> Your name:<br>
+          <input name="name" size="30" type="text"><br> Your email:<br>
+          <input name="email" size="30" type="text"><br> Your message:<br>
+          <textarea name="message" rows="7" cols="30">
+          </textarea><br>
+          <input value="Send email" type="submit">
+        </form>
+    </div>
+  </article>
+
+  <h2>Instagram</h2>
+  <article class="socialmedia">
+        <p>
+          Instagram is my main source of social media, and where I can be easily reached online.
+        </p>
+
+        <iframe src ="https://www.instagram.com/heysugah_/embed"
+          height= "315"
+          width= "560"
+          frameBorder="0" 
+          title= "Instagram Page"
+          scrolling="yes">
+        </iframe>
+    </article>
+    </main>
+
+  <script src="js/rwd_nav.js"></script>
+  <script>
+    if ( window.history.replaceState ) {
+        window.history.replaceState( null, null, window.location.href );
+    }
+  </script>
+
+  </body>
+  </html>
